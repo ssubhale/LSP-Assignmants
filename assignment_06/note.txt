@@ -1,0 +1,10 @@
+
+# First create .o and and then create .so (shared object) file
+
+>> gcc -fPIC -c funlib.c -o funlib.o
+>> gcc -shared -o libfunlib.so funlib.o
+
+
+# Second compile the actual client file using -ldl command
+
+>> gcc solution.c -o myexe.exe -ldl
